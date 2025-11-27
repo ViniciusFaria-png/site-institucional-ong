@@ -220,5 +220,44 @@
 
 
 
+    .parceiros {
+      position: relative;
+      width: 100%;
+      height: 400px; /* altura da hero */
+      overflow: hidden;
+    }
+    
+    .parceiros img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    /* Texto sobreposto */
+    .parceiros-texto {
+      position: absolute;
+      top: 260%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: left;
+      color: white;
+    }
+    
+    /* Botão */
+    .btn-parceiros {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 25px;
+      background: #000;
+      color: #000;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    
+    .btn-parceiros:hover {
+      background: #F1E3B6;
+    }
 
 
