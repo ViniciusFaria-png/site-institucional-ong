@@ -1,338 +1,220 @@
 
-    /* Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+/* =========================================
+RESET E CONFIGURAÇÕES GERAIS
+========================================= */
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      background-color: #F1E3B6;
-      color: #333;
-    }
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    header {
-      background-color: #F1E3B6;
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #F1E3B6;
+  color: #333;
+}
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
+/* =========================================
+HEADER
+========================================= */
 
-    nav {
-      background-color: #351A03;
-      padding: 1rem;
-      box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
-      text-align: center;
-    }
+header {
+  background-color: #F1E3B6;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
 
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-    }
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+/* =========================================
+NAVEGAÇÃO / MENU
+========================================= */
 
-    section {
-      padding: 3rem 1rem;
-      max-width: 1000px;
-      margin: auto;
-    }
+nav {
+  background-color: #351A03; /*COR DE FUNDO CABEÇALHO*/
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;          /* Centraliza verticalmente */
+  justify-content: space-between; /* Logo esquerda, links à direita */
+}
 
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #383845;
-    }
+nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #fff; /*COR DA LETRA DA NAVEGAÇÃO*/
+  font-weight: bold;
+  font-size: 1.1rem;  /* AJUSTA O TAMANHO DAS LETRAS */
+}
 
-    section p {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-      color: #000;
-    }
+nav a:hover {
+  text-decoration: underline; /*NAVEGAÇÃO TRANSICIONA COM UNDERLINE*/
+}
 
-    footer {
-      background-color: #5a7f78;
-      color: #fff;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
-    }
+/*CONTAINER INTERNO DA NAVEGAÇÃO*/
+.nav-container {
+  max-width: 1000px;     /* MESMO DAS SECTIONS */
+  margin: 0 auto;          /* Centraliza tudo */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px; /* pequeno padding interno para evitar colagem total nas bordas */
+}
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
+/*AJUSTANDO A PROPORÇÃO DO LOGO*/
+.logo {
+  height: auto;
+  max-width: 70px; /* você pode ajustar esse valor */
+  transform: translateX(-100px); /* NEGATIVO = LINK PARA A ESQUERDA */
+}
 
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
+.menu-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(110px);  /* POSITIVO = LINKS PARA A DIREITA */
+}
 
-      section {
-        padding: 2rem 1rem;
-      }
-    }
+/* =========================================
+SESSÕES (CONTEÚDO PADRÃO)
+========================================= */
 
-/*HERO SECTION*/
+section {
+  padding: 3rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
 
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 400px; /* altura da hero */
-      overflow: hidden;
-    }
-    
-    .hero img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    /* Texto sobreposto */
-    .hero-texto {
-      position: absolute;
-      top: 63%;
-      left: 49%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: white;
-    }
-    
-    /* Botão */
-    .btn-hero {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 25px;
-      background: #fff;
-      color: #000;
-      text-decoration: none;
-      border-radius: 20px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    
-    .btn-hero:hover {
-      background: #F1E3B6;
-    }
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #383845;
+}
 
-/*QUEM SOMOS*/
+section p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #000;
+}
 
-    .quemsomos {
-      position: relative;
-      width: 100%;
-      height: 400px; /* altura da hero */
-      overflow: hidden;
-    }
-    
-    .quemsomos img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    /* Texto sobreposto */
-    .quemsomos-texto {
-      position: absolute;
-      top: 115%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: left;
-      color: white;
-    }
-    
-    /* Botão */
-    .btn-quemsomos {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 25px;
-      background: #000;
-      color: #000;
-      text-decoration: none;
-      border-radius: 20px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    
-    .btn-quemsomos:hover {
-      background: #F1E3B6;
-    }
+/* =========================================
+HERO SECTION
+========================================= */
 
-/*RESGATES*/
+.hero {
+  position: relative;
+  width: 100%; /*LARGURA, 100% DO PNG*/
+  height: 100%; /*ALTURA, 100% DO PNG*/
+  overflow: hidden;
+}
 
-    .resgates {
-      position: relative;
-      width: 100%;
-      height: 400px; /* altura da hero */
-      overflow: hidden;
-    }
-    
-    .resgates img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    /* Texto sobreposto */
-    .resgates-texto {
-      position: absolute;
-      top: 180%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: left;
-      color: white;
-    }
-    
-    /* Botão */
-    .btn-resgates {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 25px;
-      background: #000;
-      color: #000;
-      text-decoration: none;
-      border-radius: 20px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    
-    .btn-resgates:hover {
-      background: #F1E3B6;
-    }
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-/*PARCEIROS*/
+/* Texto sobreposto */
+.hero-texto {
+  position: absolute;
+  top: 80%; /*POSICIONAMENTO HORIZONTAL DO BOTÃO, QUEREMOS QUE ELE FIQUEI ABAIXO DO MEIO*/
+  left: 50%; /*CENTRALIZADO, 50% DIZ QUE O BOTÃO CTA VAI FICAR NO MEIO DO QUADRO*/
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
 
-    .parceiros {
-      position: relative;
-      width: 100%;
-      height: 400px; /* altura da hero */
-      overflow: hidden;
-    }
-    
-    .parceiros img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    /* Texto sobreposto */
-    .parceiros-texto {
-      position: absolute;
-      top: 260%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: left;
-      color: white;
-    }
-    
-    /* Botão */
-    .btn-parceiros {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 25px;
-      background: #000;
-      color: #000;
-      text-decoration: none;
-      border-radius: 20px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    
-    .btn-parceiros:hover {
-      background: #F1E3B6;
-    }
+/* Botão */
+.btn-hero {
+  display: flex;
+  align-items: center; /*ALINHAMENTO DO TEXTO, CENTRALIZADO*/
+  padding: 5px 20px; /*ESPAÇAMENTO, QUANTIDADE DE PIXEIS ENTRE VERTICAL E HORIZONTAL*/
+  background: #F1E3B6; /*FUNDO DO BOTÃO SEM INTERAÇÃO*/
+  color: #351A03; /*COR DA LETRA*/
+  text-decoration: none;
+  border-radius: 30px; /*CIRCUNFERÊNCIA DO BOTÃO, RAIO DELE*/
+  font-weight: bold; /*FONTE NEGRITO*/
+  transition: 0.3s; /*TEMPO DE TRANSIÇÃO DA COR*/
+  font-size: 2rem; /*TAMANHO DA LETRA*/
+  border: 4px solid #351A03; /* BORDA, ESPESSURA, TIPO, COR */
+}
 
-/*FAÇA UMA DOAÇÃO*/
+.btn-hero:hover {
+  background: #fff; /*COR QUE O BOTÃO VAI TRANSICIONAR*/
+}
 
-    .facaumadoacao {
-      position: relative;
-      width: 100%;
-      height: 400px; /* altura da hero */
-      overflow: hidden;
-    }
-    
-    .facaumadoacao img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    /* Texto sobreposto */
-    .facaumadoacao-texto {
-      position: absolute;
-      top: 330%;
-      left: 32%;
-      transform: translate(-50%, -50%);
-      text-align: left;
-      color: white;
-    }
-    
-    /* Botão */
-    .btn-facaumadoacao {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 25px;
-      background: #000;
-      color: #000;
-      text-decoration: none;
-      border-radius: 20px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    
-    .btn-facaumadoacao:hover {
-      background: #F1E3B6;
-    }
+/* =========================================
+BLOCOS DE IMAGEM + TEXTO (SEÇÕES DE CONTEÚDO)
+========================================= */
 
-/*CONTATO*/
+/*FORMATO DO BODY, CHAMADO POR QUEM SOMOS, RESGATES, PARCEIROS, FAÇA UMA DOAÇÃO E CONTATOS*/
+.bloco-imagem {
+  position: relative;
+  width: 100%; /*PROPORÇÃO DA IMAGEM IMPORTADA PNG*/
+  object-fit: block;
+}
 
-    .contato {
-      position: relative;
-      width: 100%;
-      height: 400px; /* altura da hero */
-      overflow: hidden;
-    }
-    
-    .contato img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    /* Texto sobreposto */
-    .contato-texto {
-      position: absolute;
-      top: 418%;
-      left: 28.5%;
-      transform: translate(-50%, -50%);
-      text-align: left;
-      color: white;
-    }
-    
-    /* Botão */
-    .btn-contato {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 25px;
-      background: #000;
-      color: #000;
-      text-decoration: none;
-      border-radius: 20px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    
-    .btn-contato:hover {
-      background: #F1E3B6;
-    }
+/* Texto sobreposto */
+.texto-sobre {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: left; /*ALINHAMENTO*/
+  align-items: left; /*ALINHAMENTO*/
+  text-align: left; /*ALINHAMENTO*/
+  padding: 2rem;
+  color: white;
+}
+
+/* Texto responsivo */
+.texto-sobre h2 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  margin-top: 20px; /*AJUSTE DE MARGEM SUPERIOR, PARA SE ENQUADRAR MELHOR NAS BORDAS*/
+  color: #351A03; /*COR DA LETRA*/
+}
+
+.texto-sobre p {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  max-width: auto; /*SE ADAPTA AUTOMATICAMENTE AO ESPAÇO BRANCO*/
+  color: #351A03; /*COR DA LETRA*/
+}
+
+/* =========================================
+RODAPÉ
+========================================= */
+
+footer {
+  background-color: #351A03; /*COR DO RODAPÉ*/
+  color: #fff; /*COR DA LETRA DO RODAPÉ*/
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+
+/* =========================================
+RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+}

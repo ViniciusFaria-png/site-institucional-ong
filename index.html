@@ -1,80 +1,141 @@
+<!-- ============================ -->
+<!-- HTML ORGANIZADO E IDENTADO -->
+<!-- Estrutura preservada / Comentários adicionados para organização -->
+<!-- ============================ -->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Anjos de Patas</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
+  <head>
+    <!-- Meta tags básicas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Título da página -->
+    <title>Anjos de Patas</title>
+
+    <!-- Arquivo CSS principal -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+
+  <body>
+
+  <!-- ============================ -->
+  <!-- NAVEGAÇÃO PRINCIPAL -->
+  <!-- ============================ -->
   <nav>
-    <img src="img\logo-png.png" alt="logo-png">
-    <a href="#quemsomos">Quem Somos</a>
-    <a href="#resgates">Resgates</a>
-    <a href="#parceiros">Parceiros</a>
-    <a href="#facaumadoacao">Faça uma Doação</a>
-    <a href="#contato">Contatos</a>
+    <div class="nav-container">
+
+      <!-- LOGO -->
+      <img src="img/logo-png.png" alt="logo-png" class="logo">
+
+      <!-- LINKS DO MENU -->
+      <div class="menu-links">
+        <a href="#quemsomos">Quem Somos</a>
+        <a href="#resgates">Resgates</a>
+        <a href="#parceiros">Parceiros</a>
+        <a href="#facaumadoacao">Faça uma Doação</a>
+        <a href="#contato">Contatos</a>
+      </div>
+    </div>
   </nav>
 
-  <header>
-    <img src="img\HERO SECTION png.png" alt="HERO SECTION png">
+  <!-- ============================ -->
+  <!-- HERO SECTION -->
+  <!-- ============================ -->
+  <section id="hero" class="bloco-imagem">
+
+    <!-- Imagem de fundo da Hero -->
+    <img src="img/HERO SECTION png.png" alt="btn-hero">
+
+    <!-- Botão CTA sobreposto -->
     <div class="hero-texto">
       <a href="#facaumadoacao" class="btn-hero">Doe Agora</a>
     </div>
-  </header>
+  </section>
 
+  <!-- ============================ -->
+  <!-- QUEM SOMOS -->
+  <!-- ============================ -->
+  <section id="quemsomos" class="bloco-imagem">
 
-
-
-  <section id="quemsomos">
+    <!-- Imagem de fundo Quem Somos -->
     <img src="img\quemsomos.png" alt="quemsomos">
-    <div class="quemsomos-texto">
-    <h2>Quem somos</h2>
-    <p>Desde 2010, nossa missão é dar voz e esperança aos animais que mais precisam. Ao longo dessa trajetória, mais de 150 vidas foram resgatadas, cuidadas e recolocadas no caminho do amor, cada uma delas reforça por que existimos.</p>
-    <p>Atuamos de Araçariguama a Sorocaba, promovendo feiras de adoção, realizando resgates, criando oportunidades de apadrinhamento e mobilizando a comunidade por meio de posts de apoio para reencontrar animais perdidos.</p>
-    <p>Também oferecemos apoio veterinário e ração para as pessoas que acolhem nossos cães temporariamente, garantindo que cada animal receba cuidado, respeito e conforto durante sua transição para um novo lar.</p>
-    <p>Somos movidos pela compaixão, pelo compromisso e pela certeza de que cada gesto transforma. Trabalhamos para conectar pessoas e animais, criar histórias felizes e construir um futuro onde todos tenham a chance de ser amados e protegidos.</p>
-    <p>Aqui, cada vida importa e você pode fazer parte disso.</p>
+
+    <div class="texto-sobre">
+      <h2>Quem somos</h2>
+      <p>Desde 2010, nossa missão é dar voz e esperança aos animais que mais precisam. Ao longo dessa trajetória, mais de 150 vidas foram resgatadas, cuidadas e recolocadas no caminho do amor, cada uma delas reforça por que existimos.</p>
+      <p>Atuamos de Araçariguama a Sorocaba, promovendo feiras de adoção, realizando resgates, criando oportunidades de apadrinhamento e mobilizando a comunidade por meio de posts de apoio para reencontrar animais perdidos.</p>
+      <p>Também oferecemos apoio veterinário e ração para as pessoas que acolhem nossos cães temporariamente, garantindo que cada animal receba cuidado, respeito e conforto durante sua transição para um novo lar.</p>
+      <p>Somos movidos pela compaixão, pelo compromisso e pela certeza de que cada gesto transforma. Trabalhamos para conectar pessoas e animais, criar histórias felizes e construir um futuro onde todos tenham a chance de ser amados e protegidos.</p>
+      <p>Aqui, cada vida importa e você pode fazer parte disso.</p>
     </div>
   </section>
 
-  <section id="resgates">
+  <!-- ============================ -->
+  <!-- RESGATES -->
+  <!-- ============================ -->
+  <section id="resgates" class="bloco-imagem">
+
+    <!-- Imagem de fundo Resgates -->
     <img src="img\RESGATES.png" alt="RESGATES">
-    <div class="resgates-texto">
-    <h2>Resgates</h2>
-    <p>Nossos resgates acontecem todos os dias, de diferentes formas, alguns bichinhos são encontrados machucados, outros abandonados, outros simplesmente perdidos. Cada um deles recebe atendimento imediato, acolhimento e todo o cuidado necessário para se recuperar.</p>
-    <p>Trabalhamos para garantir segurança, dignidade e uma segunda chance para cada vida que cruzar o nosso caminho. Resgatar é o primeiro passo para transformar histórias — e você pode fazer parte dessa mudança.</p>
-  </div>
+
+    <div class="texto-sobre">
+      <h2>Resgates</h2>
+      <p>Nossos resgates acontecem todos os dias, de diferentes formas, alguns bichinhos são encontrados machucados, outros abandonados, outros simplesmente perdidos. Cada um deles recebe atendimento imediato, acolhimento e todo o cuidado necessário para se recuperar.</p>
+      <p>Trabalhamos para garantir segurança, dignidade e uma segunda chance para cada vida que cruzar o nosso caminho. Resgatar é o primeiro passo para transformar histórias — e você pode fazer parte dessa mudança.</p>
+    </div>
   </section>
 
-  <section id="parceiros">
+  <!-- ============================ -->
+  <!-- PARCEIROS -->
+  <!-- ============================ -->
+  <section id="parceiros" class="bloco-imagem">
+
+    <!-- Imagem de fundo Parceiros -->
     <img src="img\parceiros.png" alt="parceiros">
-    <div class="parceiros-texto">
-    <h2>Parceiros</h2>
-    <p>Nenhuma missão grande é feita sozinha. Nossos parceiros ajudam a manter nossos resgates possíveis: oferecendo suporte financeiro, serviços veterinários, ração, hospedagem temporária e muito mais.</p>
-    <p>Com eles, ampliamos nosso alcance e conseguimos salvar ainda mais vidas. Ser parceiro é escolher fazer a diferença de forma direta e real. Juntos, transformamos cuidado em impacto.</p>
+
+    <div class="texto-sobre">
+      <h2>Parceiros</h2>
+      <p>Nenhuma missão grande é feita sozinha. Nossos parceiros ajudam a manter nossos resgates possíveis: oferecendo suporte financeiro, serviços veterinários, ração, hospedagem temporária e muito mais.</p>
+      <p>Com eles, ampliamos nosso alcance e conseguimos salvar ainda mais vidas. Ser parceiro é escolher fazer a diferença de forma direta e real. Juntos, transformamos cuidado em impacto.</p>
     </div>
   </section>
 
-  <section id="facaumadoacao">
+  <!-- ============================ -->
+  <!-- FAÇA UMA DOAÇÃO -->
+  <!-- ============================ -->
+  <section id="facaumadoacao" class="bloco-imagem">
+
+    <!-- Imagem de fundo Faça Uma Doação -->
     <img src="img\facaumadoacao.png" alt="facaumadoacao">
-    <div class="facaumadoacao-texto">
-    <h2>Faça uma Doação</h2>
+
+    <div class="texto-sobre">
+      <h2>Faça uma Doação</h2>
     </div>
   </section>
 
-  <section id="contato">
+  <!-- ============================ -->
+  <!-- CONTATOS -->
+  <!-- ============================ -->
+  <section id="contato" class="bloco-imagem">
+
+    <!-- Imagem de fundo Parceiros -->
     <img src="img\contato.png" alt="contato">
-    <div class="contato-texto">
-    <h2>Contatos</h2>
+
+    <div class="texto-sobre">
+      <h2>Contatos</h2>
     </div>
   </section>
 
+  <!-- ============================ -->
+  <!-- RODAPÉ -->
+  <!-- ============================ -->
   <footer>
     <p>&copy; 2025 ONG Anjos de Patas Região Oeste. Todos os direitos reservados.</p>
   </footer>
 
-</body>
-</html>
+  </body>
 
+</html>
