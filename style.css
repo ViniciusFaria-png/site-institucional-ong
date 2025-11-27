@@ -18,23 +18,6 @@ body {
 }
 
 /* =========================================
-HEADER
-========================================= */
-
-header {
-  background-color: #F1E3B6;
-  color: #fff;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  text-align: center;
-}
-
-/* =========================================
 NAVEGAÇÃO / MENU
 ========================================= */
 
@@ -109,19 +92,6 @@ section p {
 HERO SECTION
 ========================================= */
 
-.hero {
-  position: relative;
-  width: 100%; /*LARGURA, 100% DO PNG*/
-  height: 100%; /*ALTURA, 100% DO PNG*/
-  overflow: hidden;
-}
-
-.hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 /* Texto sobreposto */
 .hero-texto {
   position: absolute;
@@ -159,7 +129,6 @@ BLOCOS DE IMAGEM + TEXTO (SEÇÕES DE CONTEÚDO)
 .bloco-imagem {
   position: relative;
   width: 100%; /*PROPORÇÃO DA IMAGEM IMPORTADA PNG*/
-  object-fit: block;
 }
 
 /* Texto sobreposto */
@@ -168,8 +137,8 @@ BLOCOS DE IMAGEM + TEXTO (SEÇÕES DE CONTEÚDO)
   inset: 0;
   display: flex;
   flex-direction: column;
-  justify-content: left; /*ALINHAMENTO*/
-  align-items: left; /*ALINHAMENTO*/
+  justify-content: flex-start; /*ALINHAMENTO*/
+  align-items: flex-start; /*ALINHAMENTO*/
   text-align: left; /*ALINHAMENTO*/
   padding: 2rem;
   color: white;
