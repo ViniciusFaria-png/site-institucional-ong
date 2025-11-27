@@ -85,11 +85,7 @@
       }
     }
 
-
-
-
-
-
+/*HERO SECTION*/
 
     .hero {
       position: relative;
@@ -131,8 +127,7 @@
       background: #F1E3B6;
     }
 
-
-
+/*QUEM SOMOS*/
 
     .quemsomos {
       position: relative;
@@ -174,8 +169,7 @@
       background: #F1E3B6;
     }
 
-
-
+/*RESGATES*/
 
     .resgates {
       position: relative;
@@ -217,8 +211,7 @@
       background: #F1E3B6;
     }
 
-
-
+/*PARCEIROS*/
 
     .parceiros {
       position: relative;
@@ -260,4 +253,86 @@
       background: #F1E3B6;
     }
 
+/*FAÇA UMA DOAÇÃO*/
 
+    .facaumadoacao {
+      position: relative;
+      width: 100%;
+      height: 400px; /* altura da hero */
+      overflow: hidden;
+    }
+    
+    .facaumadoacao img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    /* Texto sobreposto */
+    .facaumadoacao-texto {
+      position: absolute;
+      top: 330%;
+      left: 32%;
+      transform: translate(-50%, -50%);
+      text-align: left;
+      color: white;
+    }
+    
+    /* Botão */
+    .btn-facaumadoacao {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 25px;
+      background: #000;
+      color: #000;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    
+    .btn-facaumadoacao:hover {
+      background: #F1E3B6;
+    }
+
+/*CONTATO*/
+
+    .contato {
+      position: relative;
+      width: 100%;
+      height: 400px; /* altura da hero */
+      overflow: hidden;
+    }
+    
+    .contato img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    /* Texto sobreposto */
+    .contato-texto {
+      position: absolute;
+      top: 418%;
+      left: 28.5%;
+      transform: translate(-50%, -50%);
+      text-align: left;
+      color: white;
+    }
+    
+    /* Botão */
+    .btn-contato {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 25px;
+      background: #000;
+      color: #000;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    
+    .btn-contato:hover {
+      background: #F1E3B6;
+    }
