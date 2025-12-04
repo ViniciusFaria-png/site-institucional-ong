@@ -62,15 +62,15 @@
       <p>Com eles, ampliamos nosso alcance e conseguimos salvar ainda mais vidas. Ser parceiro é escolher fazer a diferença de forma direta e real. Juntos, transformamos cuidado em impacto.</p>
     </div>    
     <div class="gallery-parceiros-wrapper">
-      <div>
-        <img src="/img/cobasi-logo.png" alt="Parceiro 1">
-      </div>
-      <div>
-        <img src="/img/agrocat-log.jpg" alt="Parceiro 2">
-      </div>
-      <div>
-        <img src="/img/copal-loog.png" alt="Parceiro 3">
-      </div>
+      <a href="https://www.cobasi.com.br" target="_blank" rel="noopener noreferrer">
+        <img src="/img/cobasi-logo.png" alt="Cobasi">
+      </a>
+      <a href="https://www.instagram.com/agrocat.agropecuaria/" target="_blank" rel="noopener noreferrer">
+        <img src="/img/agrocat-log.jpg" alt="Agrocat">
+      </a>
+      <a href="http://www.copal.com.br/" target="_blank" rel="noopener noreferrer">
+        <img src="/img/copal-loog.png" alt="Copal">
+      </a>
     </div>
   </section>
 
@@ -78,17 +78,21 @@
     <h1>Faça uma Doação</h1>
     <div class="doacao-container">
       <div class="doacao-opcoes">
-        <div class="doacao-card">
+        <div class="doacao-card" data-valor="5.00">
           <h2>Doar R$ 5,00</h2>
           <p>Você ajuda a garantir um futuro melhor para animais resgatados dos maus-tratos.</p>
         </div>
-        <div class="doacao-card">
+        <div class="doacao-card" data-valor="10.00">
           <h2>Doar R$ 10,00</h2>
           <p>Você contribui com medicamentos e curativos para a recuperação de um resgatado.</p>
         </div>
-        <div class="doacao-card">
+        <div class="doacao-card" data-valor="15.00">
           <h2>Doar R$ 15,00</h2>
           <p>Você proporciona os cuidados básicos de entrada hospitalar para um resgatado.</p>
+        </div>
+        <div class="doacao-card" data-custom="true">
+          <h2>Doe Outros Valores</h2>
+          <p>Entre em contato pelo WhatsApp para definir um valor personalizado de doação.</p>
         </div>
       </div>
       <div class="doacao-imagem">
@@ -137,6 +141,85 @@
   <footer>
     <p>&copy; 2025 Fatec. Todos os direitos reservados.</p>
   </footer>
+
+  <button id="btnVoltarTopo" class="btn-voltar-topo" aria-label="Voltar ao topo">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <div id="modalQRCode" class="modal-qrcode">
+    <div class="modal-content">
+      <button class="btn-fechar-modal" aria-label="Fechar modal">&times;</button>
+      <h2 id="modalTitulo">Doar R$ 5,00</h2>
+      <p>Escaneie o QR Code abaixo para fazer sua doação via PIX</p>
+      <div class="qrcode-placeholder">
+        QR CODE
+      </div>
+      <p style="font-size: 0.9rem; color: #999;">Chave PIX: XXXXXXXXXXXXXXXXXX</p>
+    </div>
+  </div>
+
+  <script>
+    const btnVoltarTopo = document.getElementById('btnVoltarTopo');
+    const header = document.querySelector('header');
+    
+    window.addEventListener('scroll', () => {
+      const headerHeight = header.offsetHeight;
+      if (window.scrollY > headerHeight) {
+        btnVoltarTopo.classList.add('show');
+      } else {
+        btnVoltarTopo.classList.remove('show');
+      }
+    });
+    
+    btnVoltarTopo.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    const modal = document.getElementById('modalQRCode');
+    const modalTitulo = document.getElementById('modalTitulo');
+    const btnFecharModal = document.querySelector('.btn-fechar-modal');
+    const doacaoCards = document.querySelectorAll('.doacao-card');
+
+    doacaoCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const isCustom = card.getAttribute('data-custom');
+        
+        if (isCustom) {
+          const mensagem = encodeURIComponent('Olá! Gostaria de fazer uma doação.');
+          window.open(`https://wa.me/5511999999999?text=${mensagem}`, '_blank');
+        } else {
+          const valor = card.getAttribute('data-valor');
+          modalTitulo.textContent = `Doar R$ ${valor.replace('.', ',')}`;
+          modal.classList.add('show');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+
+    btnFecharModal.addEventListener('click', () => {
+      modal.classList.remove('show');
+      document.body.style.overflow = 'auto';
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('show')) {
+        modal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+      }
+    });
+  </script>
 
 </body>
 </html>
